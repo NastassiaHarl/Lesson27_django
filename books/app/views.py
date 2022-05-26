@@ -33,3 +33,10 @@ def book_detail(request, book_id):
         'book': book,
     }
     return render(request, 'file_books.html', {'context': context})
+
+def review_detail(request, review_id):
+    review = get_object_or_404(models.Review, id=review_id)
+    context = {
+        'review': review,
+    }
+    return render(request, 'review.html', {'context': context})
