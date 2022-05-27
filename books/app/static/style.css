@@ -1,20 +1,117 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+}
 .all-books-title {
-    color: blue;
-    text-align: center;
-    margin: 40px;
-    background-color: pink;
-    border: 4px dashed crimson;
+    color: #000;
+    font-size: 1.8rem;
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+}
+.all-books-title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #000;
+    height: 2px;
+    width: 50%;
+    top: 100%;
+    border-radius: 20px;
 }
 .img-container {
     display: flex;
     justify-content: center;
+    height: 45vh;
+    margin-bottom: 40px;
 }
-img {
-    border-radius: 40px;
+.img-container img {
+    object-fit: cover;
+    width: 100%;
 }
-body {
-    background-color: antiquewhite;
-}
+
 .book-table {
     margin-top: 40px;
+}
+
+.card-container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
+    background-repeat: no-repeat;
+}
+
+.card-container1 .card {
+    width: 440px;
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 11px -2px #555;
+}
+
+.card-container1 .card .card-img img {
+    width: 100%;
+}
+
+.card-container1 .card .card-info {
+    padding: 20px 15px;
+}
+
+.card-container1 .card .card-info div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.card-container1 .card .card-info div h4,
+ .card-container1 .card .card-info div p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.card-container1 .card .card-info div .years,
+ .card-container1 .card .card-info div .book-price {
+    font-size: 0.8rem;
+}
+
+.card-container1 .card .card-info div h4 span,
+.card-container1 .card .card-info div .years span,
+.card-container1 .card .card-info div p span,
+.card-container1 .card .card-info div .book-price span {
+    font-weight: 700;
+}
+
+.card-shell2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #98FB98 10%, #00FF7F 100%);
+    background-repeat: no-repeat;
+}
+
+.card-shell2 .card {
+    overflow: hidden;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 11px -2px #555;
+}
+
+.card-shell2 .card .card-img img {
+    width: 100%;
+}
+
+.card-shell2 .card .card-info div h4 span,
+.card-shell2 .card .card-info div p span {
+    font-weight: 700;
 }

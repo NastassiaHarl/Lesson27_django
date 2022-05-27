@@ -1,10 +1,19 @@
 {% extends 'base.html' %}
 {% block title %}{{ context.review }}{% endblock %}
 {% block content %}
-<div class="card" style="width: 18rem;">
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">Name: {{ context.review.book.name }}</li>
-        <li class="list-group-item">Review: {{ context.review }}</li>
-    </ul>
+<div class="card-shell2">
+    <div class="card" style="width: 45rem;">
+        <div class="card-img">
+            <img src="https://www.99techpost.com/wp-content/uploads/2018/11/Review-submission.jpg" alt="books" draggable="false" />
+        </div>
+        <div class="card-info">
+            <div>
+                <h4><span>Name: </span>{{ context.review.book.name }}</h4>
+            </div>
+            <div>
+                <p><span>Review: </span>{{ context.review }}</p>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

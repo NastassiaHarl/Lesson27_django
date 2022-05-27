@@ -1,13 +1,23 @@
 {% extends 'base.html' %}
 {% block title %}{{ context.book.name }}{% endblock %}
 {% block content %}
-<div class="card" style="width: 18rem;">
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">Name: {{ context.book.name }}</li>
-        <li class="list-group-item">Year: {{ context.book.year }}</li>
-        <li class="list-group-item">Author: {{ context.book.author_name}}</li>
-        <li class="list-group-item">Price: {{ context.book.price }}</li>
-    </ul>
+<div class="card-container1">
+    <div class="card">
+        <div class="card-img">
+            <img src="https://www.changinghands.com/sites/changinghands.com/files/teenbundle.jpg" alt="books" draggable="false" />
+        </div>
+        <div class="card-info">
+            <div>
+                <h4><span>Name: </span>{{ context.book.name }}</h4>
+                <span class="years"><span>Year: </span>{{ context.book.year }}</span>
+            </div>
+            <div>
+                <p><span>Author: </span>{{ context.book.author_name}}</p>
+                <span class="book-price"><span>Price: </span>{{ context.book.price }}</span>
+            </div>
+
+        </div>
+    </div>
 </div>
 {% endblock %}
 
