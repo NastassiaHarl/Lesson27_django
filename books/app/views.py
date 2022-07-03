@@ -9,12 +9,12 @@ def index(request):
 def home(request):
     return HttpResponse("My home")
 
+def index(request):
+    return HttpResponse("Hello, world.")
+
 def all_books(request):
     books = models.Book.objects.all()
     return HttpResponse(books)
-
-def index(request):
-    return HttpResponse("Hello, world.")
 
 def all_books(request):
     books = models.Book.objects.all()
